@@ -15,7 +15,7 @@ const client = new Discord.Client ();
             .setTimestamp()
             .setURL("https://pa1.narvii.com/5959/525c77e26b72512b02dfffa25bf0d7602dd04759_hq.gif ")
             .addField(":computer: **Kirie**",
-              "``help``, ``invite``, ``say``")
+              "``help``, ``invite``")
             .addField(":notes: **Musique**", "``disconnect``, ``nowplaying``, ``pause``, ``play``, ``playlist``, ``resume``, ``skip``, ``stop``, ``summon``", true)
             .addBlankField(true)
           
