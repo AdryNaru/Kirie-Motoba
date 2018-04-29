@@ -7,7 +7,7 @@ const client = new Discord.Client ();
             const embed = new Discord.RichEmbed()
             .setTitle("**COMMANDES**")
             .setAuthor("Kirie", "https://myanimelist.cdn-dena.com/images/characters/12/287024.jpg")
-            .setColor(0x30e1fa)
+            .setColor(#58FAF4)
             .setDescription("voila mes mes mes commande master")
             .setFooter("je je je je je je humaru-chaaaaan", "https://thumbs.gfycat.com/FlickeringAfraidIcelandichorse-mobile.jpg")
             .setImage("https://pa1.narvii.com/5959/525c77e26b72512b02dfffa25bf0d7602dd04759_hq.gif")
