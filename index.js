@@ -7,7 +7,7 @@ client.on("ready", () => {
 
 	var memberCount = client.users.size;
 	var serverCount = client.guilds.size;
-		client.user.setGame("fait u!help pour mes commandes Oni-chan");
+		client.user.setGame("fait k!help pour mes commandes Oni-chan");
 		client.user.setStatus("online");
 	console.log("--------------------------------------");
 	console.log("Utilisateurs: " + memberCount + "\nServeurs: " + serverCount);
