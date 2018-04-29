@@ -26,6 +26,7 @@ client.on("message", (message) => {
             let newPrefix = message.content.split(" ").slice(1, 2)[0];
             // change le prefix//
             config.prefix = newPrefix;
+            message.channel.send("le prefix est changer")
             //save du fichier config//
             fs.writeFile("./config.json", JSON.stringify(config), (err) => console.error)
         }
