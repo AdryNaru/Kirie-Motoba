@@ -13,7 +13,7 @@ client.on("ready", () => {
 	var serverCount = client.guilds.size;
 		client.user.setGame("la console avec Umaru");
 		client.user.setStatus("idle");
-	console.log("--------------------------------------");
+	console.log("Prete au travaille maître");
 	console.log("Utilisateurs: " + memberCount + "\nServeurs: " + serverCount);
 });
 
@@ -49,6 +49,7 @@ client.on("message", (message) => {
             let member = message.mentions.members.first();
             let reason = args.slice(1).join(" ");
             member.kick(reason);
+            message.channel.send("sort de ma chambre tu n'as rien n'a y faire")
         } else
         // say //
         if (command === 'say') {
