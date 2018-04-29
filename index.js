@@ -32,6 +32,7 @@ client.on("message", (message) => {
         } else
         //kirie//
         if (command === 'kirie') {
+            message.delete();
             message.channel.send("ne ne ne me parle pas ");
         } else
         //prefix//
@@ -57,14 +58,17 @@ client.on("message", (message) => {
         } else
         //umaru//
         if (command === 'umaru') {
+            message.delete();
             message.channel.send("laisse moi joué avec umaru https://img00.deviantart.net/80a4/i/2016/220/6/e/render_14_kirie_motoba_and_umaru_doma_chibi_by_jadoo_cucheo-dad357t.png" );
         } else
         //cape//
         if (command === 'cape') {
+            message.delete();
             message.channel.send("non je n'ai pas volé la cap d'umaru elle me la prete https://tshop.r10s.jp/amiami/cabinet/images/2015/38/goods-00053027.jpg?fitin=330:330" );
         } else
         //cape//
         if (command === 'ecchi') {
+            message.delete();
             message.channel.send("Je ne veux pas ce genre de commande d'accord ? http://i0.kym-cdn.com/photos/images/original/001/014/328/6d7.gif" );
         }
 
