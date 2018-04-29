@@ -5,15 +5,6 @@ const token = process.env.TOKEN;
 //pour le prefix//
 let prefix = "k!"
 
-client.on("ready", () => {
-
-	var memberCount = client.users.size;
-	var serverCount = client.guilds.size;
-		client.user.setGame("mon mon prefix c'est k!");
-		client.user.setStatus("online");
-	console.log("--------------------------------------");
-    console.log("Utilisateurs: " + memberCount + "\nServeurs: " + serverCount);
-});
 
 client.on("message", (message) => {
         //vérification du prefix//
