@@ -4,7 +4,6 @@ function test(message,prefix,client){
             .setColor(0x00ffff)
             .setDescription("Il faut que j'aille m'occuper de Umaru-chan désoler")
             .setImage("https://78.media.tumblr.com/3b2f19dbf1e7b9c6ffaecfc7388a6fb1/tumblr_oy914zzmQs1tm1dgio6_r1_500.gif")
-            .addBlankField(true)
           
             message.channel.send({embedtest}); 
     
