@@ -2,6 +2,7 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const config = require("./config.json");
+var prefix = require("./config.json).prefix;
 
 
 // const a ne pas mettre partout //
