@@ -12,7 +12,7 @@ client.on("ready", () => {
 	var memberCount = client.users.size;
 	var serverCount = client.guilds.size;
 		client.user.setGame("la console avec Umaru");
-		client.user.setStatus("Do Not Disturb");
+		client.user.setStatus("do_not_disturb");
 	console.log("--------------------------------------");
 	console.log("Utilisateurs: " + memberCount + "\nServeurs: " + serverCount);
 });
