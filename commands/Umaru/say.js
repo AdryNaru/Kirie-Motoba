@@ -4,7 +4,7 @@ const args = message.content.slice(config.prefix.lenght).trim().split(/ +/g);
 const command = agrs.shift().toLowerCase();
 
 function test(message,prefix,client){
-  if (message.content.startsWith(prefix + "say")) {
+ if(command === "say") {
     const sayMessage = args.join(" ");
     message.delete.catch(O_o=>{});
     message.channel.send(sayMessage);
