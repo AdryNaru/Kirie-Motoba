@@ -12,7 +12,7 @@ client.on("ready", () => {
 	var memberCount = client.users.size;
 	var serverCount = client.guilds.size;
 		client.user.setGame("la console avec Umaru");
-		client.user.setStatus("Idle");
+		client.user.setStatus("idle");
 	console.log("--------------------------------------");
 	console.log("Utilisateurs: " + memberCount + "\nServeurs: " + serverCount);
 });
@@ -57,7 +57,7 @@ client.on("message", (message) => {
         } else
         //umaru//
         if (command === 'umaru') {
-            message.channel.send("laisse moi joué avec umaru", "https://img00.deviantart.net/80a4/i/2016/220/6/e/render_14_kirie_motoba_and_umaru_doma_chibi_by_jadoo_cucheo-dad357t.png" );
+            message.channel.send("laisse moi joué avec umaru https://img00.deviantart.net/80a4/i/2016/220/6/e/render_14_kirie_motoba_and_umaru_doma_chibi_by_jadoo_cucheo-dad357t.png" );
         }
 
         
