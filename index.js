@@ -32,7 +32,22 @@ client.on("message", (message) => {
             message.channel.send("le prefix est changer")
             //save du fichier config//
             fs.writeFile("./config.json", JSON.stringify(config), (err) => console.error)
+        } else
+        // kick //
+        if (command === 'kick') {
+            let member = message.mentions.members.first();
+            let reason = args.slice(1).join(" ");
+            member.kick(reason);
+        } else
+        // say //
+        if (command === 'say') {
+            let test = args.slice(1).join(" ");
+            message.delete();
+            message.channel.send(text);
         }
+
+        
+
     
 });
 
