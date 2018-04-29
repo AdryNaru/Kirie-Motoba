@@ -1,1 +1,1 @@
-Umaru est un bot en cours de développement par AdryNeko et NaruSnake. On débute dans le codage et notre buut est de faire un bot qui s'entralise les meilleur commande pour évité d'avoir plusieur bot similaire
+Kirie est un bot detes pour un autre bot
