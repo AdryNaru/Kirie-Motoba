@@ -15,7 +15,7 @@ client.on("message", (message) => {
         //commands//
         //ping//
         if (message.content.startsWith(config.prefix + "ping")) {
-            message.channel.send("pong connard tu te crois drole");
+            message.channel.send("pong BAKAAAAAA tu te crois drole");
         } else
         //kirie//
         if (message.content.startsWith(config.prefix + "kirie")) {
