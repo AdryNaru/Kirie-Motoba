@@ -20,12 +20,12 @@ client.on('message', message => {
 const help = require("./commands/Umaru/help.js");
 const invite = require("./commands/Umaru/invite.js");
 const test = require("./commands/Umaru/test.js");
-
+const say = require("./commands/Umaru/say.js");
 
 help(message, prefix, client)
 invite(message, prefix, client)
 test(message, prefix, client)
-
+say(message, prefix, client)
 
 
   });
