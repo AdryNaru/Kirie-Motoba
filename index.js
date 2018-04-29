@@ -11,7 +11,7 @@ client.on("message", (message) => {
         if (!message.content.startsWith(prefix) || message.author.bot) return;
 
         //commands//
-        if (message.content.startsWith(prefix + ping)) {
+        if (message.content.startsWith(prefix + "ping")) {
             message.channel.send("pong connard tu te crois drole");
         } else
 
