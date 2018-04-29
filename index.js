@@ -1,9 +1,13 @@
+// const a prévoir partout //
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const config = require("./config.json");
+const args = message.content.slice(prefix.lenght).trim().split(/ +/g);
+const command = args.shift().toLowerCase();
+
+// const a ne pas mettre partout //
 const fs = require("fs");
 const token = process.env.TOKEN
-
 
 
 client.on("message", (message) => {
@@ -12,15 +16,15 @@ client.on("message", (message) => {
 
         //commands//
         //ping//
-        if (message.content.startsWith(config.prefix + "ping")) {
+        if (command === 'ping') {
             message.channel.send("pong BAKAAAAAA tu te crois drole");
         } else
         //kirie//
-        if (message.content.startsWith(config.prefix + "kirie")) {
+        if (command === 'kirie') {
             message.channel.send("ne ne ne me parle pas ");
         }
         //prefix//
-        if (message.content.startsWith(config.prefix + "prefix")) {
+        if (command === 'prefix') {
             let newPrefix = message.content.split(" ").slice(1, 2)[0];
             // change le prefix//
             config.prefix = newPrefix;
