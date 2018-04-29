@@ -1,33 +1,37 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-const token = process.env.TOKEN;
-var prefix = "k!";
+const config = require("./config.json");
+const fs = require("fs");
+const token = process.env.TOKEN
 
-client.on("ready", () => {
+//pour le prefix//
+let prefix = "k!"
 
-	var memberCount = client.users.size;
-	var serverCount = client.guilds.size;
-		client.user.setGame("fait k!help pour mes commandes Oni-chan");
-		client.user.setStatus("online");
-	console.log("--------------------------------------");
-	console.log("Utilisateurs: " + memberCount + "\nServeurs: " + serverCount);
+
+client.on("message", (message) => {
+        //vérification du prefix//
+        if (!message.content.startsWith(config.prefix) || message.author.bot) return;
+
+        //commands//
+        //ping//
+        if (message.content.startsWith(config.prefix + "ping")) {
+            message.channel.send("pong BAKAAAAAA tu te crois drole");
+        } else
+        //kirie//
+        if (message.content.startsWith(config.prefix + "kirie")) {
+            message.channel.send("ne ne ne me parle pas ");
+        }
+        //prefix//
+        if (message.content.startsWith(config.prefix + "prefix")) {
+            let newPrefix = message.content.split(" ").slice(1, 2)[0];
+            // change le prefix//
+            config.prefix = newPrefix;
+            //save du fichier config//
+            fs.writeFile("./config.json", JSON.stringify(config), (err) => console.error)
+        }
+    
 });
 
 
 
-client.on('message', message => {
-
-const help = require("./commands/Umaru/help.js");
-const invite = require("./commands/Umaru/invite.js");
-const test = require("./commands/Umaru/test.js");
-const say = require("./commands/Umaru/say.js");
-
-help(message, prefix, client)
-invite(message, prefix, client)
-test(message, prefix, client)
-say(message, prefix, client)
-
-
-  });
-
-client.login(token)
+client.login(token);
