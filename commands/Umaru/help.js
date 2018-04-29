@@ -4,7 +4,7 @@ const client = new Discord.Client ();
             
             function help(message,prefix,client){
                 if (message.content.startsWith(prefix + "help")) {
-            const embedtest = new Discord.RichEmbed()
+            const embed = new Discord.RichEmbed()
             .setTitle("**COMMANDES**")
             .setAuthor("Kirie", "https://myanimelist.cdn-dena.com/images/characters/12/287024.jpg")
             .setColor(0x00ffff)
@@ -19,7 +19,7 @@ const client = new Discord.Client ();
             .addField(":notes: **Musique**", "``disconnect``, ``nowplaying``, ``pause``, ``play``, ``playlist``, ``resume``, ``skip``, ``stop``, ``summon``", true)
             .addBlankField(true)
           
-            message.channel.send({embedtest});
+            message.channel.send({embed});
 
             }}
                     
