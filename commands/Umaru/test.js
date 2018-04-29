@@ -1,3 +1,6 @@
+const Discord = require('discord.js');
+const client = new Discord.Client ();
+
 function test(message,prefix,client){
   if (message.content.startsWith(prefix + "test")) {
                 const embedtest = new Discord.RichEmbed()
