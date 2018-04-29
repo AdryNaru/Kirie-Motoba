@@ -13,7 +13,7 @@ client.on("ready", () => {
 	var serverCount = client.guilds.size;
 		client.user.setGame("la console avec Umaru");
 		client.user.setStatus("idle");
-	console.log("je suis pret à travailler");
+	console.log("--------------------------------------");
 	console.log("Utilisateurs: " + memberCount + "\nServeurs: " + serverCount);
 });
 
@@ -58,6 +58,14 @@ client.on("message", (message) => {
         //umaru//
         if (command === 'umaru') {
             message.channel.send("laisse moi joué avec umaru https://img00.deviantart.net/80a4/i/2016/220/6/e/render_14_kirie_motoba_and_umaru_doma_chibi_by_jadoo_cucheo-dad357t.png" );
+        } else
+        //cape//
+        if (command === 'cape') {
+            message.channel.send("non je n'ai pas volé la cap d'umaru elle me la prete https://tshop.r10s.jp/amiami/cabinet/images/2015/38/goods-00053027.jpg?fitin=330:330" );
+        } else
+        //cape//
+        if (command === 'ecchi') {
+            message.channel.send("Je ne veux pas ce genre de commande d'accord ? http://i0.kym-cdn.com/photos/images/original/001/014/328/6d7.gif" );
         }
 
         
