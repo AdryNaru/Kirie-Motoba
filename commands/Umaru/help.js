@@ -10,10 +10,10 @@ const client = new Discord.Client ();
             .setColor(0x00ffff)
             .setDescription("voila mes mes mes commande master")
             .setFooter("je je je je je je humaru-chaaaaan", "https://thumbs.gfycat.com/FlickeringAfraidIcelandichorse-mobile.jpg")
-            .setImage("https://pa1.narvii.com/5959/525c77e26b72512b02dfffa25bf0d7602dd04759_hq.gif")
+            .setImage("https://pa1.narvii.com/5869/855517d925623a54a04ee47faf60eab436fbbace_hq.gif")
             .setThumbnail("https://pa1.narvii.com/6028/55e6fb94f2512b2e600d02dc14ac413861c96de8_hq.gif")
             .setTimestamp()
-            .setURL("https://pa1.narvii.com/5869/855517d925623a54a04ee47faf60eab436fbbace_hq.gif")
+            .setURL("https://pa1.narvii.com/5959/525c77e26b72512b02dfffa25bf0d7602dd04759_hq.gif ")
             .addField(":computer: **Kirie**",
               "``help``, ``invite``")
             .addField(":notes: **Musique**", "``disconnect``, ``nowplaying``, ``pause``, ``play``, ``playlist``, ``resume``, ``skip``, ``stop``, ``summon``", true)
