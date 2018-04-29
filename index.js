@@ -4,8 +4,6 @@ const config = require("./config.json");
 const fs = require("fs");
 const token = process.env.TOKEN
 
-//pour le prefix//
-let prefix = "k!"
 
 
 client.on("message", (message) => {
