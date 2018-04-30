@@ -23,6 +23,10 @@ fs.readdir("./commands/", (err, files) => {
         console.log
         let eventName = file.split(".")[0];
         console.log
+        var sousdossier = eventName.split("/")
+        console.log
+        let eventName = sousdossier[sousdossier.lenght-1];
+        console.log
         client.on(eventName, (...args) => eventFunction.run(client, ...args));
         console.log
     });
