@@ -21,7 +21,7 @@ fs.readdir("./commands/", (err, files) => {
         console.log
         let eventFunction = require(`./commands/${file}`);
         console.log
-        let eventName = file.split(".")[0];
+        var eventName = file.split(".")[0];
         console.log
         var sousdossier = eventName.split("/")
         console.log
