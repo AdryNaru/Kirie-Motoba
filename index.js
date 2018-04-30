@@ -16,26 +16,38 @@ client.on("ready", () => {
 
 fs.readdir("./commands/", (err, files) => {
     if (err) return console.error(err);
+    console.log
     files.forEach(file => {
+        console.log
         let eventFunction = require(`./commands/${file}`);
+        console.log
         let eventName = file.split(".")[0];
+        console.log
         client.on(eventName, (...args) => eventFunction.run(client, ...args));
+        console.log
     });
 });
 
 client.on("message", (message) => {
-    if (message.author.client) return;
+    console.log
+    if (message.author.bot) return;
+    console.log
     if (message.content.indexOf(config.prefix) !==0) return;
-
+    console.log
+    
     const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
 
     try { 
-        let commandfile = require(`./commands/${command}.js`);
+        console.log
+        let commandFile = require(`./commands/${command}.js`);
+        console.log
         commandFile.run(client, message, args);
+        console.log
 
         } catch (err) {
             console.error(err);
+            console.log
         }
     });
 
