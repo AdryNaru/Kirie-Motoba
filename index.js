@@ -14,10 +14,10 @@ client.on("ready", () => {
 	console.log("Utilisateurs: " + memberCount + "\nServeurs: " + serverCount);
 });
 
-fs.readdir("./events/", (err, files) => {
+fs.readdir("./commands/", (err, files) => {
     if (err) return console.error(err);
     files.forEach(file => {
-        let eventFunction = require(`./events/${file}`);
+        let eventFunction = require(`./commands/${file}`);
         let eventName = file.split(".")[0];
     });
 });
