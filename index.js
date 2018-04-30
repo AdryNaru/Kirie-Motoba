@@ -19,6 +19,7 @@ fs.readdir("./commands/", (err, files) => {
     files.forEach(file => {
         let eventFunction = require(`./commands/${file}`);
         let eventName = file.split(".")[0];
+        client.on(eventName, (...args) => eventFunction.run(client, ...args));
     });
 });
 
