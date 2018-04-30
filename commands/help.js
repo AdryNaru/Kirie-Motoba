@@ -12,7 +12,7 @@ exports.run = (client, message, args) => {
     .setTimestamp()
     .setURL("https://pa1.narvii.com/5959/525c77e26b72512b02dfffa25bf0d7602dd04759_hq.gif ")
     .addField(":computer: **Kirie**",
-      "``help``, ``kirie``, ``say``, ``ping``,``invite``,``repos``,\n``ecchi``,``cape``,``umaru``,``kick``,``prefix``", true)
+      "``help``, ``kirie``, ``say``, ``ping``,``invite``,``repos``,\n``ecchi``,``cape``,``umaru``,``kick``,", true)
     .addBlankField(true)
     message.delete();
     message.channel.send({embed}).catch(console.error);
