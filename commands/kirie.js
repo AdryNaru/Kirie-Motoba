@@ -1,5 +1,6 @@
 
 exports.run = (client, message, args) => {
+    const Discord = require("discord.js");
     const embed = new Discord.RichEmbed()
     .setColor(0x00FFFF)
     .setDescription("ne ne ne me parle pas")
