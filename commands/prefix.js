@@ -1,5 +1,6 @@
 
 exports.run = (client, message, args) => {
+    const config = require("./config.json");
     const fs = require("fs");
     let newPrefix = message.content.split(" ").slice(1, 2)[0];
             // change le prefix//
