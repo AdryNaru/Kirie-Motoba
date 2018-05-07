@@ -4,7 +4,7 @@ exports.run = (client, message, args) => {
     .setColor(0x00FFFF)
     .setDescription("On n'a enfin une maj de faite")
     .setImage("https://media.giphy.com/media/fGR0AL2DhNODnOgEUG/giphy.gif")
-  
+    messade.delete();
     message.channel.send({embed}).catch(console.error);
     console.log
 }
