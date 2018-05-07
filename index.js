@@ -13,7 +13,7 @@ client.on("ready", () => {
 	console.log("Je suis Online");
 	console.log("Utilisateurs: " + memberCount + "\nServeurs: " + serverCount);
 });
-
+// dossier commands //
 fs.readdir("./commands/", (err, files) => {
     if (err) return console.error(err);
     console.log
@@ -27,13 +27,28 @@ fs.readdir("./commands/", (err, files) => {
         console.log
     });
 });
-
+// dossier music //
 fs.readdir("./music/", (err, files) => {
     if (err) return console.error(err);
     console.log
     files.forEach(file => {
         console.log
         let eventFunction = require(`./music/${file}`);
+        console.log
+        let eventName = file.split(".")[0];
+        console.log
+        client.on(eventName, (...args) => eventFunction.run(client, ...args));
+        console.log
+    });
+});
+
+// dossier ussless //
+fs.readdir("./ussless/", (err, files) => {
+    if (err) return console.error(err);
+    console.log
+    files.forEach(file => {
+        console.log
+        let eventFunction = require(`./ussless/${file}`);
         console.log
         let eventName = file.split(".")[0];
         console.log
@@ -51,7 +66,7 @@ client.on("message", (message) => {
     
     const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
-
+    // dossier commands//
     try { 
         console.log
         let commandFile = require(`./commands/${command}.js`);
@@ -63,7 +78,7 @@ client.on("message", (message) => {
             console.error(err);
             console.log
         }
-
+    // dossier music//
     try { 
         console.log
         let commandFile = require(`./music/${command}.js`);
@@ -71,6 +86,18 @@ client.on("message", (message) => {
         commandFile.run(client, message, args);
         console.log
 
+        } catch (err) {
+            console.error(err);
+            console.log
+        }
+    // dossier ussless//
+    try { 
+        console.log
+        let commandFile = require(`./ussless/${command}.js`);
+        console.log
+        commandFile.run(client, message, args);
+        console.log
+    
         } catch (err) {
             console.error(err);
             console.log
