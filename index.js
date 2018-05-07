@@ -10,7 +10,7 @@ client.on("ready", () => {
 	var serverCount = client.guilds.size;
 		client.user.setGame("la console avec Umaru");
 		client.user.setStatus("idle");
-	console.log("Prete au travaille maître");
+	console.log("Je suis Online");
 	console.log("Utilisateurs: " + memberCount + "\nServeurs: " + serverCount);
 });
 
@@ -20,6 +20,20 @@ fs.readdir("./commands/", (err, files) => {
     files.forEach(file => {
         console.log
         let eventFunction = require(`./commands/${file}`);
+        console.log
+        let eventName = file.split(".")[0];
+        console.log
+        client.on(eventName, (...args) => eventFunction.run(client, ...args));
+        console.log
+    });
+});
+
+fs.readdir("./music/", (err, files) => {
+    if (err) return console.error(err);
+    console.log
+    files.forEach(file => {
+        console.log
+        let eventFunction = require(`./music/${file}`);
         console.log
         let eventName = file.split(".")[0];
         console.log
@@ -41,6 +55,18 @@ client.on("message", (message) => {
     try { 
         console.log
         let commandFile = require(`./commands/${command}.js`);
+        console.log
+        commandFile.run(client, message, args);
+        console.log
+
+        } catch (err) {
+            console.error(err);
+            console.log
+        }
+
+    try { 
+        console.log
+        let commandFile = require(`./music/${command}.js`);
         console.log
         commandFile.run(client, message, args);
         console.log
