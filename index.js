@@ -75,6 +75,8 @@ client.on("message", (message) => {
         console.log
 
         } catch (err) {
+            message.delete();
+            message.channel.send("Je je je ne connait pas cette commande")
             console.error(err);
             console.log
         }
